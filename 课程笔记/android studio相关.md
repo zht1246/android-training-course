@@ -1,6 +1,7 @@
 build.gradle(project)设置 - 加阿里云的镜像地址
 - [相关配置下载参考](http://www.androiddevtools.cn/)
-···
+
+ ``` 
 buildscript {
     
     repositories {
@@ -28,4 +29,4 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
-···
+ ``` 
