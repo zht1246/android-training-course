@@ -1,0 +1,103 @@
+<FrameLayout android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" >
+
+    <com.bm.library.PhotoView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:adjustViewBounds="true"
+        android:background="#ffffff"
+        android:minHeight="200dp"
+        android:scaleType="centerCrop"
+        tools:targetApi="lollipop" />
+
+
+</FrameLayout>
+
+<!--
+
+<com.bm.library.PhotoView
+android:id="@+id/iv2"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+
+android:scaleType="centerInside"
+android:visibility="visible" />
+-->
+
+
+<!--<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.bm.library.PhotoView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:adjustViewBounds="true"
+        android:background="#ffffff"
+        android:minHeight="200dp"
+        android:scaleType="centerCrop"
+        tools:targetApi="lollipop" />
+
+    <com.bm.library.PhotoView
+        android:id="@+id/iv2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:scaleType="centerInside"
+        android:visibility="invisible" />
+
+
+
+</FrameLayout>-->
+
+
+
+
+
+<!--<com.bm.library.PhotoView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/iv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+
+    android:background="#ffffff"
+    android:minHeight="200dp"
+
+    tools:targetApi="lollipop" />-->
+
+
+
+
+
+
+    <!--<FrameLayout
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff000000" />
+
+    <com.bm.library.PhotoView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+
+    </FrameLayout>-->
+
+
