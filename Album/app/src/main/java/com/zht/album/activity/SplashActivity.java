@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 import com.zht.album.R;
 
+
 public class SplashActivity extends AppCompatActivity {
 
 

@@ -1,5 +1,7 @@
 package com.github.skykai.ui;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +9,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -19,6 +22,7 @@ import com.github.skykai.R;
 import com.github.skykai.view.CoordinatorLinearLayout;
 import com.github.skykai.view.CoordinatorRecyclerView;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 import uk.co.senab.photoview.PhotoView;
@@ -120,8 +124,35 @@ public class PhotoPickerFragment extends AbsBoxingViewFragment {
     }
 
     private void displayPhoto(BaseMedia media) {
-        String path = media.getPath();
+        final String path = media.getPath();
         BoxingMediaLoader.getInstance().displayRaw(photoView, path, null);
+
+
+        photoView.setOnLongClickListener(new OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+
+                //由文件得到uri
+               // Uri imageUri = Uri.fromFile(new File(path));
+                //
+                //图片分享，有待进一步改善
+                try {
+                    Uri imageUri =Uri.parse(android.provider.MediaStore.Images.Media.insertImage(getContext().getContentResolver(),path,"美图","ss"));
+                    Intent shareIntent = new Intent();
+                    shareIntent.setAction(Intent.ACTION_SEND);
+                    shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
+                    shareIntent.setType("image/*");
+                    startActivity(Intent.createChooser(shareIntent, "分享到"));
+
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+
+                return true;
+
+            }
+        });
     }
 
     @Override

@@ -22,9 +22,9 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.zht.album.R;
-import com.zht.album.fragment.ZhixingFragment;
 import com.zht.album.fragment.GudianFragment;
 import com.zht.album.fragment.LingdongFragment;
+import com.zht.album.fragment.ZhixingFragment;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -166,6 +166,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_manage) {
             Intent intent = new Intent(getApplicationContext(), com.github.skykai.ui.PhotoPickerActivity.class);
             startActivity(intent);
+            /*Intent intent = new Intent(getApplicationContext(), TestActivity.class);
+            startActivity(intent);*/
+
+
+
 
 
         } else if (id == R.id.nav_share) {
