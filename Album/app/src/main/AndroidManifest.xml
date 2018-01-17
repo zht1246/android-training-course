@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".activity.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -21,8 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".fragment.blankactivity2" />
-        <activity android:name=".activity.SplashActivity"></activity>
+        <activity android:name=".activity.blankactivity2" />
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.WebviewActivity" />
+        <activity android:name=".activity.CameraActivity" />
+        <activity android:name=".activity.AboutActivity"></activity>
     </application>
 
 </manifest>

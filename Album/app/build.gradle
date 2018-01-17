@@ -36,6 +36,10 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.9.1'
 
     compile 'com.google.code.gson:gson:2.8.2'
+
+    compile 'com.yanzhenjie:album:2.0.2'
+
+    compile 'com.alibaba:fastjson:1.1.67.android'
     compile 'com.bm.photoview:library:1.4.1'
     compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
     implementation project(':app2')
