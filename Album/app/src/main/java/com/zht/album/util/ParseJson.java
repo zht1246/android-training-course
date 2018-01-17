@@ -28,14 +28,16 @@ public class ParseJson {
 
 
 
-    public static List<String> ParseJsonWithGson(){
+    public static List<String> ParseJsonWithGson(String i){
 
         List<Meitu_1_Bean> meitu_1_bean=null;
         int random=0;
 
 
         try {
-            InputStream inputStream = getContext().getAssets().open("meitu_1.json");
+            String filename="meitu_"+i+".json";
+            //InputStream inputStream = getContext().getAssets().open("meitu_1.json");
+            InputStream inputStream = getContext().getAssets().open(filename);
             int size = inputStream.available();
             byte[] buf = new byte[size];
             inputStream.read(buf);

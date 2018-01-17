@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.zht.album.fragment.MeituFragment">
+    tools:context="com.zht.album.fragment.LingdongFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <com.bm.library.PhotoView

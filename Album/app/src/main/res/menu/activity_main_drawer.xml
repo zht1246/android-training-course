@@ -6,20 +6,20 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_index"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/index"
             android:title="首页" />
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/xiangji"
             android:title="拍照" />
         <item
             android:id="@+id/nav_webview"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="webview浏览图片" />
+            android:icon="@drawable/browser"
+            android:title="在线图库" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="设置" />
+            android:icon="@drawable/picture"
+            android:title="本地相册" />
     </group>
 
     <item android:title="Communicate">

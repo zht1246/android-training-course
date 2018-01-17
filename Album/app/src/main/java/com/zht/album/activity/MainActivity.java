@@ -17,15 +17,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.zht.album.R;
-import com.zht.album.fragment.MeituFragment;
-import com.zht.album.fragment.HomeAttendanceFragment;
-import com.zht.album.fragment.HomeExamFragment;
+import com.zht.album.fragment.ZhixingFragment;
+import com.zht.album.fragment.GudianFragment;
+import com.zht.album.fragment.LingdongFragment;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -41,14 +40,13 @@ public class MainActivity extends AppCompatActivity
     private RelativeLayout relative_main;
     private ImageView img_page_start;
 
-    private static List<String> titles = new ArrayList<>(Arrays.asList("美图", "分类", "收藏夹"));
+    private static List<String> titles = new ArrayList<>(Arrays.asList("灵动", "知性", "古典"));
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         initview();
         initViewPager();
@@ -72,25 +70,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-//悬浮按钮
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        /*Snackbar.make(view, "Designed by zht,slq,xf", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();*/
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_SENDTO);
-                intent.setData(Uri.parse("mailto:zht1246@gmail.com"));
-                intent.putExtra(Intent.EXTRA_SUBJECT, "选择邮箱");
-                //intent.putExtra(Intent.EXTRA_TEXT, "Hi,");
-                try {
-                    startActivity(intent);
-                } catch (Exception e) {
-                    Toast.makeText(MainActivity.this, "未找到邮箱", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+
     }
 
     public void initViewPager() {
@@ -113,9 +93,9 @@ public class MainActivity extends AppCompatActivity
 
         List<Fragment> fragments = new ArrayList<>();
 
-        fragments.add(MeituFragment.newInstance("哈哈哈哈", "hhhh"));
-        fragments.add(new HomeAttendanceFragment());
-        fragments.add(new HomeExamFragment());
+        fragments.add(new LingdongFragment());
+        fragments.add(new ZhixingFragment());
+        fragments.add(new GudianFragment());
 
 
         SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(getSupportFragmentManager(), fragments);
@@ -191,11 +171,22 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_share) {
             Intent intent = new Intent();
             intent.setAction(Intent.ACTION_SEND);
-            intent.putExtra(Intent.EXTRA_TEXT, "哈哈哈哈哈哈哈哈哈哈哈，6666666666666666");
+            intent.putExtra(Intent.EXTRA_TEXT, "欢迎使用！");
             intent.setType("text/plain");
             startActivity(Intent.createChooser(intent, "分享方式"));
 
         } else if (id == R.id.nav_send) {
+
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_SENDTO);
+            intent.setData(Uri.parse("mailto:zht1246@gmail.com"));
+            intent.putExtra(Intent.EXTRA_SUBJECT, "请发送邮箱联系我们");
+            //intent.putExtra(Intent.EXTRA_TEXT, "Hi,");
+            try {
+                startActivity(intent);
+            } catch (Exception e) {
+                Toast.makeText(MainActivity.this, "未找到邮箱", Toast.LENGTH_SHORT).show();
+            }
 
         }
 
