@@ -30,7 +30,7 @@ public class MeituAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
 
-    //与viewholder连接
+    //先与viewholder连接，返回视图
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
@@ -43,7 +43,7 @@ public class MeituAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     }
 
-    //给viewholder里面的元素设置
+    //已经返回了视图，再给viewholder里面的元素设置
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 

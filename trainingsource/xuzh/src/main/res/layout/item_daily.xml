@@ -29,7 +29,6 @@
             android:layout_width="112dp"
             android:layout_height="96dp"
             android:scaleType="fitXY"
-
             android:layout_margin="16dp"
             android:src="@drawable/news_image"/>
     </LinearLayout>

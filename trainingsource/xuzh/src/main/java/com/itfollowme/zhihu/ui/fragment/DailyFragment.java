@@ -44,6 +44,11 @@ public class DailyFragment extends Fragment {
 
         parseJSON();
         dailyAdapter = new DailyAdapter(dailyListBean.getStories(),getContext());
+
+
+
+
+
         View view = inflater.inflate(R.layout.fragment_daily, container, false);
         mRecyclerView = view.findViewById(R.id.rv_daily_items);
         mRecyclerView.setAdapter(dailyAdapter);
@@ -64,10 +69,16 @@ public class DailyFragment extends Fragment {
             String text = new String(buf,"UTF-8");
             dailyListBean = JSON.parseObject(text, DailyListBean.class);
 
+            /*            Log.i("topStorySize",dailyListBean.getTopStories().size()+"");
+            for(DailyListBean.TopStoryBean topStoryBean : dailyListBean.getTopStories()){
+                Log.i("",topStoryBean.getTitle()+" "+topStoryBean.getImage());
+            }*/
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+
 
 }

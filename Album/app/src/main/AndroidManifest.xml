@@ -27,7 +27,6 @@
         <activity android:name=".activity.WebviewActivity" />
         <activity android:name=".activity.CameraActivity" />
         <activity android:name=".activity.AboutActivity" />
-        <activity android:name=".activity.TestActivity"></activity>
     </application>
 
 </manifest>

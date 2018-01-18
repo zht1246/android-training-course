@@ -46,7 +46,7 @@ dependencies {
     compile 'com.bm.photoview:library:1.4.1'
     compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
 
-    
+
     implementation project(':app2')
 
 }
